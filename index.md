@@ -32,6 +32,10 @@ title: "GNN Explainers 2.0: User-centric and Data-driven Insights"
 </div>
 </section>
 
+<div class="tutorial-info-card">
+  <p class="tutorial-info-text"><strong>Tutorial Info:</strong> 🗓️ Sunday, Feb 22, 2026 · 9:00 AM-12:30 PM · 📍 Room 110CD</p>
+</div>
+
 ---
 
 ## Abstract
@@ -83,29 +87,152 @@ opportunities for the web and data mining community.
 
 ---
 
-## Schedule
+## Outline & Schedule
 
-### Part 1: Introduction. (00:00 - 00:30)
+<section class="schedule-timeline">
+  <h3 class="schedule-session-title">Session 1 (9:00 AM - 10:30 AM)</h3>
+  <div class="timeline-track">
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <div class="timeline-time">9:00 - 9:30 AM</div>
+        <div class="timeline-speaker">Arijit Khan</div>
+        <div class="timeline-slides">Slides 1-27</div>
+      </div>
+      <div class="timeline-node" aria-hidden="true"></div>
+      <div class="timeline-content">
+        <strong class="timeline-section-title">Sec 1: Introduction</strong>
+        <ul class="timeline-subsections">
+          <li>1.1 Graph Neural Networks (GNNs) and Applications</li>
+          <li>1.2 Explainability of GNNs: Definitions, Importance, and Challenges</li>
+        </ul>
+        <strong class="timeline-section-title">Sec 2: GNN Explainers Categorization</strong>
+        <ul class="timeline-subsections">
+          <li>2.1 Post-hoc vs. Intrinsic / Self-explainable</li>
+          <li>2.2 Global vs. Local</li>
+          <li>2.3 Class-specific vs. Instance-specific</li>
+          <li>2.4 Model-specific vs. Model-agnostic</li>
+          <li>2.5 Forward vs. Backward</li>
+          <li>2.6 Node-level vs. Edge-level vs. Subgraph-level</li>
+          <li>2.7 Perturbation vs. Gradient vs. Decomposition vs. Surrogate Models</li>
+          <li>2.8 Factuals vs. Counterfactuals</li>
+        </ul>
+        <strong class="timeline-section-title">Sec 3: GNN Explainers 2.0</strong>
+      </div>
+    </div>
 
-- **1.1**&nbsp;&nbsp;GNNs and Applications
-- **1.2**&nbsp;&nbsp;XAI for GNNs
-- **1.1** GNNs and Applications
-- **1.2** XAI for GNNs
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <div class="timeline-time">9:30 - 10:00 AM</div>
+        <div class="timeline-speaker">Xiangyu Ke</div>
+        <div class="timeline-slides">Slides 28-49</div>
+      </div>
+      <div class="timeline-node" aria-hidden="true"></div>
+      <div class="timeline-content">
+        <strong class="timeline-section-title">Sec 4: User-centric and Data-driven Explainability Methods for GNNs</strong>
+        <ul class="timeline-subsections">
+          <li>4.1 Pattern Mining and Concept Hierarchies</li>
+          <li>4.2 Model-slicing Explanations</li>
+        </ul>
+      </div>
+    </div>
 
-### Part 2: GNN Explainers Categorization. (00:30 - 00:45)
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <div class="timeline-time">10:00 - 10:20 AM</div>
+        <div class="timeline-speaker">Yinghui Wu</div>
+        <div class="timeline-slides">Slides 50-62</div>
+      </div>
+      <div class="timeline-node" aria-hidden="true"></div>
+      <div class="timeline-content">
+        <ul class="timeline-subsections">
+          <li>4.3 Robust Explanations</li>
+          <li>4.4 Multi-criteria Explanations (Part I)</li>
+        </ul>
+      </div>
+    </div>
 
-### Part 3: User-centric XAI. (00:45 - 01:00)
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <div class="timeline-time">10:20 - 10:30 AM</div>
+        <div class="timeline-speaker">Yinghui Wu + All</div>
+        <div class="timeline-slides">Q&A</div>
+      </div>
+      <div class="timeline-node" aria-hidden="true"></div>
+      <div class="timeline-content">
+        <strong>Q&A (Session 1)</strong>
+      </div>
+    </div>
+  </div>
 
-### Part 4: User-centric and Data-driven XAI Methods for GNNs. (01:00 - 02:30)
+  <div class="timeline-break" role="note" aria-label="Break">
+    Break (10:30 AM - 11:00 AM)
+  </div>
 
-- **4.1**&nbsp;&nbsp;Pattern Mining and Concept Hierarchies
-- **4.2**&nbsp;&nbsp;Counterfactual Explanations
-- **4.3**&nbsp;&nbsp;Explanation by Examples and Rules
-- **4.4**&nbsp;&nbsp;Natural Language Explanations
-- **4.5**&nbsp;&nbsp;Declarative Explanatory Queries
-- **4.6**&nbsp;&nbsp;Robust Explanations
-- **4.7**&nbsp;&nbsp;Multi-criteria Explanations
-- **4.8**&nbsp;&nbsp;Efficiency and Interactiveness
-- **4.9**&nbsp;&nbsp;XAI beyond Classification
+  <h3 class="schedule-session-title">Session 2 (11:00 AM - 12:30 PM)</h3>
+  <div class="timeline-track">
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <div class="timeline-time">11:00 - 11:30 AM</div>
+        <div class="timeline-speaker">Yinghui Wu</div>
+        <div class="timeline-slides">Slides 63-77</div>
+      </div>
+      <div class="timeline-node" aria-hidden="true"></div>
+      <div class="timeline-content">
+        <ul class="timeline-subsections">
+          <li>4.4 Multi-criteria Explanations (Part II)</li>
+          <li>4.6 Efficiency and Interactiveness</li>
+        </ul>
+      </div>
+    </div>
 
-### Part 5: Future Directions (02:30 - 03:00)
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <div class="timeline-time">11:30 - 12:00 PM</div>
+        <div class="timeline-speaker">Xiangyu Ke</div>
+        <div class="timeline-slides">Slides 78-93</div>
+      </div>
+      <div class="timeline-node" aria-hidden="true"></div>
+      <div class="timeline-content">
+        <ul class="timeline-subsections">
+          <li>4.5 Declarative Explanatory Queries</li>
+          <li>4.7 Natural Language Explanations</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <div class="timeline-time">12:00 - 12:20 PM</div>
+        <div class="timeline-speaker">Arijit Khan</div>
+        <div class="timeline-slides">Slides 94-133</div>
+      </div>
+      <div class="timeline-node" aria-hidden="true"></div>
+      <div class="timeline-content">
+        <ul class="timeline-subsections">
+          <li>4.8 Counterfactual Explanations</li>
+        </ul>
+        <strong class="timeline-section-title">Sec 5: Future directions</strong>
+        <ul class="timeline-subsections">
+          <li>5.1 Downstream Tasks beyond Classification</li>
+          <li>5.2 Qualitative Evaluation of GNN Explanation</li>
+          <li>5.3 Explainability for Complex GNNs</li>
+          <li>5.4 Explanation with Privacy Concern</li>
+          <li>5.5 Explanation as Actionable Recourse</li>
+          <li>5.6 Multi-modal Explanation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <div class="timeline-time">12:20 - 12:30 PM</div>
+        <div class="timeline-speaker">Arijit Khan + All</div>
+        <div class="timeline-slides">Q&A</div>
+      </div>
+      <div class="timeline-node" aria-hidden="true"></div>
+      <div class="timeline-content">
+        <strong>Q&A (Session 2)</strong>
+      </div>
+    </div>
+  </div>
+</section>
