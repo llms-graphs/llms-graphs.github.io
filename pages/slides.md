@@ -350,7 +350,7 @@ description: "WSDM 2026 Tutorial Slides"
 <div class="slides-container">
   <div class="slides-toolbar" role="navigation" aria-label="Slides toolbar">
     <div class="toolbar-left">
-      <span id="currentPart" class="current-part" aria-live="polite">WSDM'26 Tutorial: GNN Explainers 2.0: User-centric and Data-driven Insights</span>
+      <span id="currentPart" class="current-part" aria-live="polite">[WSDM'26 Tutorial] GNN Explainers 2.0: User-centric and Data-driven Insights</span>
     </div>
     <div class="toolbar-right">
       <div class="toolbar-group" id="roadmapGroup">
@@ -424,6 +424,7 @@ description: "WSDM 2026 Tutorial Slides"
     if (target) {
       history.pushState(null, "", makeAnchor(n));
       target.scrollIntoView({ behavior, block: "start" });
+      setCurrentPartBySlide(n);
     } else {
       location.hash = makeAnchor(n);
     }
@@ -806,7 +807,7 @@ description: "WSDM 2026 Tutorial Slides"
   topSlideGo?.addEventListener("click", () => {
     const max = parseInt(topSlideInput?.getAttribute("max") || "", 10);
     const n = normalizedSlide(topSlideInput?.value || "", max);
-    jumpToSlide(n);
+    jumpToSlide(n, "auto");
   });
 
   topSlideInput?.addEventListener("keydown", (e) => {
@@ -814,7 +815,7 @@ description: "WSDM 2026 Tutorial Slides"
     e.preventDefault();
     const max = parseInt(topSlideInput?.getAttribute("max") || "", 10);
     const n = normalizedSlide(topSlideInput.value || "", max);
-    jumpToSlide(n);
+    jumpToSlide(n, "auto");
   });
 
   let labelResizeTid = null;

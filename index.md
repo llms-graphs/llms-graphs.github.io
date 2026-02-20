@@ -96,7 +96,7 @@ opportunities for the web and data mining community.
       <div class="timeline-meta">
         <div class="timeline-time">9:00 - 9:30 AM</div>
         <div class="timeline-speaker">Arijit Khan</div>
-        <div class="timeline-slides">Slides 1-27</div>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-1">Slides 1-27</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">
@@ -124,7 +124,7 @@ opportunities for the web and data mining community.
       <div class="timeline-meta">
         <div class="timeline-time">9:30 - 10:00 AM</div>
         <div class="timeline-speaker">Xiangyu Ke</div>
-        <div class="timeline-slides">Slides 28-49</div>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-28">Slides 28-49</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">
@@ -140,7 +140,7 @@ opportunities for the web and data mining community.
       <div class="timeline-meta">
         <div class="timeline-time">10:00 - 10:20 AM</div>
         <div class="timeline-speaker">Yinghui Wu</div>
-        <div class="timeline-slides">Slides 50-62</div>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-50">Slides 50-62</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">
@@ -174,7 +174,7 @@ opportunities for the web and data mining community.
       <div class="timeline-meta">
         <div class="timeline-time">11:00 - 11:30 AM</div>
         <div class="timeline-speaker">Yinghui Wu</div>
-        <div class="timeline-slides">Slides 63-77</div>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-63">Slides 63-77</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">
@@ -189,7 +189,7 @@ opportunities for the web and data mining community.
       <div class="timeline-meta">
         <div class="timeline-time">11:30 - 12:00 PM</div>
         <div class="timeline-speaker">Xiangyu Ke</div>
-        <div class="timeline-slides">Slides 78-93</div>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-78">Slides 78-93</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">
@@ -204,7 +204,7 @@ opportunities for the web and data mining community.
       <div class="timeline-meta">
         <div class="timeline-time">12:00 - 12:20 PM</div>
         <div class="timeline-speaker">Arijit Khan</div>
-        <div class="timeline-slides">Slides 94-133</div>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-94">Slides 94-133</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">

@@ -199,11 +199,21 @@ h2 {
 }
 
 .timeline-slides {
+  display: inline-block;
   margin-top: 0.22rem;
   font-size: 0.82rem;
   color: #0f4e4e;
   font-weight: 600;
   line-height: 1.2;
+}
+
+a.timeline-slides {
+  text-decoration: none;
+}
+
+a.timeline-slides:hover,
+a.timeline-slides:focus {
+  text-decoration: underline;
 }
 
 .timeline-node {
