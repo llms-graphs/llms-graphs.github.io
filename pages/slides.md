@@ -336,9 +336,86 @@ description: "WSDM 2026 Tutorial Slides"
     border-radius: 6px;
   }
 
-  .loading {
-    color: #6b7280;
-    font-size: 13px;
+  .loading-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 55;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background: radial-gradient(circle at 50% 30%, rgba(21, 120, 120, 0.12), rgba(255, 255, 255, 0.98) 62%);
+  }
+
+  .loading-card {
+    width: min(480px, calc(100vw - 32px));
+    background: #fff;
+    border: 1px solid #dce8e8;
+    border-left: 6px solid #159957;
+    border-radius: 16px;
+    box-shadow: 0 20px 48px rgba(15, 78, 78, 0.15);
+    padding: 22px 24px 18px;
+  }
+
+  .loading-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+
+  .loading-spinner {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 3px solid #d1d5db;
+    border-top-color: #159957;
+    animation: spin 0.85s linear infinite;
+    flex: 0 0 auto;
+  }
+
+  .loading-title {
+    margin: 0;
+    color: #0f4e4e;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+
+  .loading-text {
+    margin: 0 0 12px;
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.35;
+  }
+
+  .loading-progress {
+    width: 100%;
+    height: 7px;
+    border-radius: 999px;
+    background: #e5e7eb;
+    overflow: hidden;
+  }
+
+  .loading-progress-bar {
+    display: block;
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #159957, #157878);
+    transition: width 0.35s ease;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .error-overlay .loading-card {
+    border-left-color: #b91c1c;
+  }
+
+  .error-overlay .loading-title {
+    color: #7f1d1d;
   }
 
   .error {
@@ -377,7 +454,18 @@ description: "WSDM 2026 Tutorial Slides"
   </div>
 
   <div id="slidesRoot" aria-live="polite"></div>
-  <div id="slidesStatus" class="loading">Loading slides...</div>
+  <div id="slidesStatus" class="loading-overlay" role="status" aria-live="polite" aria-atomic="true">
+    <div class="loading-card">
+      <div class="loading-header">
+        <span class="loading-spinner" aria-hidden="true"></span>
+        <p class="loading-title">Preparing Slide Viewer</p>
+      </div>
+      <p id="slidesStatusText" class="loading-text">Loading slides</p>
+      <div class="loading-progress" aria-hidden="true">
+        <span class="loading-progress-bar"></span>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script type="module">
@@ -396,6 +484,7 @@ description: "WSDM 2026 Tutorial Slides"
 
   const root = document.getElementById("slidesRoot");
   const statusEl = document.getElementById("slidesStatus");
+  const statusTextEl = document.getElementById("slidesStatusText");
   const roadmapBtn = document.getElementById("roadmapBtn");
   const roadmapPanel = document.getElementById("roadmapPanel");
   const roadmapMenu = document.getElementById("roadmapMenu");
@@ -406,6 +495,28 @@ description: "WSDM 2026 Tutorial Slides"
   const topSlideGo = document.getElementById("topSlideGo");
 
   let roadmapItems = [];
+  const totalLoadingSteps = 3;
+
+  function setLoadingStep(step, message) {
+    if (!statusEl) return;
+    const currentStep = Math.max(1, Math.min(totalLoadingSteps, Number(step) || 1));
+    if (statusTextEl) statusTextEl.textContent = message;
+    const bar = statusEl.querySelector(".loading-progress-bar");
+    if (bar) {
+      bar.style.width = `${Math.round((currentStep / totalLoadingSteps) * 100)}%`;
+    }
+    statusEl.setAttribute("aria-label", `${message} (${currentStep}/${totalLoadingSteps})`);
+  }
+
+  function showLoadError(message) {
+    statusEl.className = "loading-overlay error-overlay";
+    statusEl.innerHTML = `
+      <div class="loading-card">
+        <p class="loading-title">Unable to Load Slides</p>
+        <p class="loading-text">${message}</p>
+      </div>
+    `;
+  }
 
   function makeId(n) { return `slide-${n}`; }
   function makeAnchor(n) { return `#${makeId(n)}`; }
@@ -614,16 +725,16 @@ description: "WSDM 2026 Tutorial Slides"
   }
 
   (async function boot() {
-    statusEl.textContent = "Loading slides...";
+    setLoadingStep(1, "Step 1/3: Loading Slides");
 
     const pdfjs = await importPdfjs();
     if (!pdfjs) {
-      statusEl.className = "error";
-      statusEl.textContent = "Viewer failed to load. Open the PDF directly.";
+      showLoadError("Viewer failed to load. Use Download to open the PDF directly.");
       return;
     }
 
     setWorkerSrcLocal(pdfjs);
+    setLoadingStep(2, "Step 2/3: Parsing Pages");
 
     let pdfDoc = null;
     try {
@@ -634,14 +745,14 @@ description: "WSDM 2026 Tutorial Slides"
         setWorkerSrcCdn(pdfjs);
         pdfDoc = await pdfjs.getDocument(pdfUrl).promise;
       } catch (e2) {
-        statusEl.className = "error";
-        statusEl.textContent = "Failed to load PDF. Use the Download menu.";
+        showLoadError("Failed to load PDF. Use the Download menu.");
         console.error(e2);
         return;
       }
     }
 
     const total = pdfDoc.numPages;
+    setLoadingStep(3, "Step 3/3: Rendering Preview");
     const frag = document.createDocumentFragment();
     for (let i = 1; i <= total; i++) {
       frag.appendChild(buildSlideShell(i));
