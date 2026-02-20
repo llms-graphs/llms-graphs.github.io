@@ -382,7 +382,7 @@ description: "WSDM 2026 Tutorial Slides"
 
 <script type="module">
   const pdfUrl = "{{ '/assets/docs/WSDM26Tut_GNNExplainers2.pdf' | relative_url }}";
-  const deckTitle = "WSDM'26 Tutorial: GNN Explainers 2.0: User-centric and Data-driven Insights";
+  const deckTitle = "[WSDM'26 Tutorial] GNN Explainers 2.0: User-centric and Data-driven Insights";
 
   // Fallback roadmap used when the PDF does not contain outline/bookmarks.
   // Update slide numbers if you want precise manual control.

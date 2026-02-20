@@ -132,6 +132,7 @@ opportunities for the web and data mining community.
         <ul class="timeline-subsections">
           <li>4.1 Pattern Mining and Concept Hierarchies</li>
           <li>4.2 Model-slicing Explanations</li>
+          <li>4.6 Efficiency and Interactiveness</li>
         </ul>
       </div>
     </div>
@@ -180,7 +181,6 @@ opportunities for the web and data mining community.
       <div class="timeline-content">
         <ul class="timeline-subsections">
           <li>4.4 Multi-criteria Explanations (Part II)</li>
-          <li>4.6 Efficiency and Interactiveness</li>
         </ul>
       </div>
     </div>
