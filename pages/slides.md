@@ -440,7 +440,7 @@ description: "WSDM 2026 Tutorial Slides"
         <button id="downloadBtn" class="tool-btn primary" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="downloadPanel">Download</button>
         <div id="downloadPanel" class="dropdown-panel" role="dialog" aria-modal="true" aria-label="Select format">
           <div class="menu">
-            <a class="menu-item" href="{{ '/assets/docs/WSDM26Tut_GNNExplainers2.pdf' | relative_url }}" download>PDF (~9.9MB)</a>
+            <a class="menu-item" href="{{ '/assets/docs/WSDM26Tut_GNNExplainers2.pdf' | relative_url }}" download>PDF (~6.7MB)</a>
             <a class="menu-item" href="{{ '/assets/docs/WSDM26Tut_GNNExplainers2.pptx' | relative_url }}" download>PPTX (~21.1MB)</a>
           </div>
         </div>
