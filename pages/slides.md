@@ -350,7 +350,7 @@ description: "WSDM 2026 Tutorial Slides"
 <div class="slides-container">
   <div class="slides-toolbar" role="navigation" aria-label="Slides toolbar">
     <div class="toolbar-left">
-      <span id="currentPart" class="current-part" aria-live="polite">[Slides - WSDM'26 Tutorial] GNN Explainers 2.0: User-centric and Data-driven Insights</span>
+      <span id="currentPart" class="current-part" aria-live="polite">WSDM'26 Tutorial: GNN Explainers 2.0: User-centric and Data-driven Insights</span>
     </div>
     <div class="toolbar-right">
       <div class="toolbar-group" id="roadmapGroup">
@@ -363,8 +363,8 @@ description: "WSDM 2026 Tutorial Slides"
         <button id="downloadBtn" class="tool-btn primary" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="downloadPanel">Download</button>
         <div id="downloadPanel" class="dropdown-panel" role="dialog" aria-modal="true" aria-label="Select format">
           <div class="menu">
-            <a class="menu-item" href="{{ '/assets/docs/WSDM26Tut_GNNExplainers2.pdf' | relative_url }}" download>PDF</a>
-            <a class="menu-item" href="{{ '/assets/docs/WSDM26Tut_GNNExplainers2.pptx' | relative_url }}" download>PPTX</a>
+            <a class="menu-item" href="{{ '/assets/docs/WSDM26Tut_GNNExplainers2.pdf' | relative_url }}" download>PDF (~9.9MB)</a>
+            <a class="menu-item" href="{{ '/assets/docs/WSDM26Tut_GNNExplainers2.pptx' | relative_url }}" download>PPTX (~21.1MB)</a>
           </div>
         </div>
       </div>
@@ -382,16 +382,16 @@ description: "WSDM 2026 Tutorial Slides"
 
 <script type="module">
   const pdfUrl = "{{ '/assets/docs/WSDM26Tut_GNNExplainers2.pdf' | relative_url }}";
-  const deckTitle = "[Slides - WSDM'26 Tutorial] GNN Explainers 2.0: User-centric and Data-driven Insights";
+  const deckTitle = "WSDM'26 Tutorial: GNN Explainers 2.0: User-centric and Data-driven Insights";
 
   // Fallback roadmap used when the PDF does not contain outline/bookmarks.
   // Update slide numbers if you want precise manual control.
   const fallbackRoadmap = [
-    { slide: 1, label: "Part 1: Introduction" },
-    { slide: 11, label: "Part 2: GNN Explainers Categorization" },
-    { slide: 16, label: "Part 3: User-centric XAI" },
-    { slide: 21, label: "Part 4: User-centric and Data-driven XAI Methods" },
-    { slide: 51, label: "Part 5: Future Directions" }
+    { slide: 2, label: "Sec 1: Introduction" },
+    { slide: 12, label: "Sec 2: GNN Explainers Categorization" },
+    { slide: 23, label: "Sec 3: GNN Explainers 2.0" },
+    { slide: 27, label: "Sec 4: User-centric and Data-driven Explainability Methods for GNNs" },
+    { slide: 125, label: "Sec 5: Future Directions" }
   ];
 
   const root = document.getElementById("slidesRoot");
@@ -419,11 +419,11 @@ description: "WSDM 2026 Tutorial Slides"
     return n;
   }
 
-  function jumpToSlide(n) {
+  function jumpToSlide(n, behavior = "smooth") {
     const target = document.getElementById(makeId(n));
     if (target) {
       history.pushState(null, "", makeAnchor(n));
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      target.scrollIntoView({ behavior, block: "start" });
     } else {
       location.hash = makeAnchor(n);
     }
@@ -431,16 +431,17 @@ description: "WSDM 2026 Tutorial Slides"
 
   function setCurrentPartBySlide(n) {
     if (!currentPartEl) return;
+    if (n === 1) {
+      currentPartEl.textContent = deckTitle;
+      currentPartEl.title = `${deckTitle} (Slide 1)`;
+      return;
+    }
     let label = deckTitle;
     for (const item of roadmapItems) {
       if (item.slide <= n) label = item.label;
       else break;
     }
-    if (label === deckTitle && window.matchMedia("(max-width: 640px)").matches) {
-      currentPartEl.textContent = "WSDM'26 Tutorial";
-    } else {
-      currentPartEl.textContent = label;
-    }
+    currentPartEl.textContent = label;
     currentPartEl.title = `${label} (Slide ${n})`;
   }
 
@@ -651,13 +652,9 @@ description: "WSDM 2026 Tutorial Slides"
 
     topSlideInput?.setAttribute("max", String(total));
 
-    const outlineRoadmap = await roadmapFromPdfOutline(pdfDoc, total);
     const manualRoadmap = normalizeRoadmap(fallbackRoadmap, total);
-    roadmapItems = outlineRoadmap.length ? outlineRoadmap : manualRoadmap;
-
-    if (!roadmapItems.length || roadmapItems[0].slide !== 1) {
-      roadmapItems.unshift({ slide: 1, label: deckTitle });
-    }
+    // Use curated roadmap labels to keep section naming and boundaries consistent.
+    roadmapItems = manualRoadmap;
 
     renderRoadmapMenu(roadmapItems);
 
@@ -692,10 +689,10 @@ description: "WSDM 2026 Tutorial Slides"
     milestoneEls.forEach((el) => milestoneObserver.observe(el));
   })();
 
-  function closeRoadmapPanel() {
+  function closeRoadmapPanel({ restoreFocus = true } = {}) {
     roadmapPanel.classList.remove("open");
     roadmapBtn.setAttribute("aria-expanded", "false");
-    roadmapBtn.focus();
+    if (restoreFocus) roadmapBtn.focus();
   }
 
   function openRoadmapPanel() {
@@ -714,9 +711,9 @@ description: "WSDM 2026 Tutorial Slides"
     const item = e.target.closest(".menu-item");
     if (!item) return;
     const n = parseInt(item.getAttribute("data-slide"), 10);
-    closeRoadmapPanel();
+    closeRoadmapPanel({ restoreFocus: false });
     setCurrentPartBySlide(n);
-    jumpToSlide(n);
+    jumpToSlide(n, "auto");
   });
 
   function closeDownloadPanel() {

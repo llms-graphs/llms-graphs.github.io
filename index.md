@@ -211,7 +211,7 @@ opportunities for the web and data mining community.
         <ul class="timeline-subsections">
           <li>4.8 Counterfactual Explanations</li>
         </ul>
-        <strong class="timeline-section-title">Sec 5: Future directions</strong>
+        <strong class="timeline-section-title">Sec 5: Future Directions</strong>
         <ul class="timeline-subsections">
           <li>5.1 Downstream Tasks beyond Classification</li>
           <li>5.2 Qualitative Evaluation of GNN Explanation</li>
