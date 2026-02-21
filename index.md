@@ -204,7 +204,7 @@ opportunities for the web and data mining community.
       <div class="timeline-meta">
         <div class="timeline-time">12:00 - 12:20 PM</div>
         <div class="timeline-speaker">Arijit Khan</div>
-        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-94">Slides 94-133</a>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-95">Slides 94-133</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">
