@@ -1,5 +1,7 @@
 title: "LLMs+Graphs: Toward Graph-Native, Synergistic AI Systems"
 description: "PAKDD 2026 Tutorial"
+url: "https://llms-graphs.github.io"
+baseurl: ""
 pakdd_logo: /assets/logos/pakdd2026.png
 theme: jekyll-theme-cayman
 logo: /assets/logos/logo1s.png
