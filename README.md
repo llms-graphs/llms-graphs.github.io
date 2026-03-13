@@ -1,7 +1,7 @@
-# gnn-explainers.github.io
-Webpage for WSDM26 Tutorial: GNN Explainers 2.0: User-centric and Data-driven Insights
+# llms-graphs.github.io
+Webpage for PAKDD26 Tutorial: LLMs+Graphs: Toward Graph-Native, Synergistic AI Systems
 
-Deployed at https://gnn-explainers.github.io/
+Deployed at https://llms-graphs.github.io/
 
 ## Local development
 1. Install dependencies:

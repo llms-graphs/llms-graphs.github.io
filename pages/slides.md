@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "GNN Explainers 2.0: User-centric and Data-driven Insights"
-description: "WSDM 2026 Tutorial Slides"
+title: "LLMs+Graphs: Toward Graph-Native, Synergistic AI Systems"
+description: "PAKDD 2026 Tutorial Slides"
 ---
 
 <style>
@@ -427,7 +427,7 @@ description: "WSDM 2026 Tutorial Slides"
 <div class="slides-container">
   <div class="slides-toolbar" role="navigation" aria-label="Slides toolbar">
     <div class="toolbar-left">
-      <span id="currentPart" class="current-part" aria-live="polite">[WSDM'26 Tutorial] GNN Explainers 2.0: User-centric and Data-driven Insights</span>
+      <span id="currentPart" class="current-part" aria-live="polite">[PAKDD'26 Tutorial] LLMs+Graphs: Toward Graph-Native, Synergistic AI Systems</span>
     </div>
     <div class="toolbar-right">
       <div class="toolbar-group" id="roadmapGroup">
@@ -440,8 +440,8 @@ description: "WSDM 2026 Tutorial Slides"
         <button id="downloadBtn" class="tool-btn primary" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="downloadPanel">Download</button>
         <div id="downloadPanel" class="dropdown-panel" role="dialog" aria-modal="true" aria-label="Select format">
           <div class="menu">
-            <a class="menu-item" href="{{ '/assets/docs/WSDM26Tut_GNNExplainers2.pdf' | relative_url }}" download>PDF (~9.1MB)</a>
-            <a class="menu-item" href="{{ '/assets/docs/WSDM26Tut_GNNExplainers2.pptx' | relative_url }}" download>PPTX (~23.8MB)</a>
+            <a class="menu-item" href="{{ '/assets/docs/PAKD26tutorial.pdf' | relative_url }}" download>PDF (~xxMB)</a>
+            <a class="menu-item" href="{{ '/assets/docs/PAKD26tutorial.pptx' | relative_url }}" download>PPTX (~xxMB)</a>
           </div>
         </div>
       </div>
@@ -469,8 +469,8 @@ description: "WSDM 2026 Tutorial Slides"
 </div>
 
 <script type="module">
-  const pdfUrl = "{{ '/assets/docs/WSDM26Tut_GNNExplainers2.pdf' | relative_url }}";
-  const deckTitle = "[WSDM'26 Tutorial] GNN Explainers 2.0: User-centric and Data-driven Insights";
+  const pdfUrl = "{{ '/assets/docs/PAKDD26tutorial.pdf' | relative_url }}";
+  const deckTitle = "[PAKDD'26 Tutorial] LLMs+Graphs: Toward Graph-Native, Synergistic AI Systems";
 
   // Fallback roadmap used when the PDF does not contain outline/bookmarks.
   // Update slide numbers if you want precise manual control.

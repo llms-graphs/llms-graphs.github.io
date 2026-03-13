@@ -36,6 +36,11 @@ h2 {
   word-wrap: break-word;
   hyphens: auto;
   font-size: 2.25rem;
+  margin: 0.5rem 0 0.35rem; /* slightly more breathing room around title */
+}
+
+.project-tagline {
+  margin: 0 0 0.55rem; /* small increase in space above buttons */
 }
 
 @media screen and (max-width: 42em) {
@@ -52,12 +57,13 @@ h2 {
 
 .page-header {
   position: relative;
-  padding: 4rem 5rem; /* Reduced padding values */
+  padding: 1.4rem 3.0rem 0.6rem; /* slightly smaller gap below header */
 }
 
-.wsdm-logo {
-  margin-top: 10px;
-  max-width: 320px;
+.pakdd-logo {
+  margin-top: 0;
+  margin-bottom: 0.9rem; /* more space between logo and title */
+  max-width: 140px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -71,21 +77,30 @@ h2 {
 }
 
 @media screen and (max-width: 42em) {
-  .wsdm-logo {
-    max-width: 250px;
+  .pakdd-logo {
+    max-width: 110px;
+  }
+
+  .page-header {
+    padding: 1.8rem 1.4rem 1.4rem;
   }
 }
 
 .speakers-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   margin-top: 2rem;
   margin-bottom: 30px;
 }
 
 .speakers-section {
-  padding-top: 1.6rem;
+  padding-top: 0; /* bring speakers even closer to header */
+}
+
+.speakers-section h2 {
+  margin-top: 0.2rem;      /* small space above "Speakers" */
+  margin-bottom: 0.4rem;   /* tighter space below heading */
 }
 
 @media (max-width: 768px) {

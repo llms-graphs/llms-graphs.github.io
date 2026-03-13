@@ -254,6 +254,7 @@ GEM
     zeitwerk (2.6.18)
 
 PLATFORMS
+  universal-darwin-24
   universal-darwin-25
 
 DEPENDENCIES
