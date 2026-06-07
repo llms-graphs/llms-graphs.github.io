@@ -475,11 +475,14 @@ description: "PAKDD 2026 Tutorial Slides"
   // Fallback roadmap used when the PDF does not contain outline/bookmarks.
   // Update slide numbers if you want precise manual control.
   const fallbackRoadmap = [
-    { slide: 2, label: "Sec 1: Introduction" },
-    { slide: 12, label: "Sec 2: GNN Explainers Categorization" },
-    { slide: 23, label: "Sec 3: GNN Explainers 2.0" },
-    { slide: 27, label: "Sec 4: User-centric and Data-driven Explainability Methods for GNNs" },
-    { slide: 126, label: "Sec 5: Future Directions" }
+    { slide: 1, label: "Sec 1: LLMs" },
+    { slide: 16, label: "Sec 2: LLMs for Graphs" },
+    { slide: 51, label: "Sec 3: Graphs for LLMs" },
+    { slide: 68, label: "Sec 4: Large Language Models & Knowledge Graphs" },
+    { slide: 114, label: "Sec 5: LLMs for Knowledge Graphs" },
+    { slide: 126, label: "Sec 6: AI Agents" },
+    { slide: 166, label: "Sec 7: AI Agents for Graphs" },
+    { slide: 180, label: "Sec 8: Future Directions" }
   ];
 
   const root = document.getElementById("slidesRoot");

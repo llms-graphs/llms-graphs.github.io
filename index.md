@@ -28,7 +28,7 @@ title: "LLMs+Graphs: Toward Graph-Native, Synergistic AI Systems"
 </section>
 
 <div class="tutorial-info-card">
-  <p class="tutorial-info-text"><strong>Tutorial Info:</strong> 🗓️ Thursday, June 9, 2026 · TBD · 📍 TBD</p>
+  <p class="tutorial-info-text"><strong>Tutorial Info:</strong> 🗓️ Tuesday, June 9, 2026 · Tutorial 4 · 📍 Room 4, Tai Po II Room, 2/F</p>
 </div>
 
 ---
@@ -52,74 +52,97 @@ This tutorial synthesizes the algorithms, systems, and design principles driving
 ## Outline & Schedule
 
 <section class="schedule-timeline">
-  <h3 class="schedule-session-title">Session 1 (Time: TBD, 70 min)</h3>
+  <h3 class="schedule-session-title">Session 1 (Time: 09:00-10:30, 90 min)</h3>
   <div class="timeline-track">
     <div class="timeline-item">
       <div class="timeline-meta">
-        <div class="timeline-time">Time: TBD, 30 min</div>
+        <div class="timeline-time">Time: 09:00-09:20, 20 min</div>
         <div class="timeline-speaker">Xin Huang</div>
-        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-1">Slides 1-xx</a>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-1">Slides 1-15</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">
         <strong class="timeline-section-title">Sec 1: Introduction</strong>
         <ul class="timeline-subsections">
-          <li>1.1 Large Language Models (LLMs) and Applications</li>
-          <li>1.2 Graph Foundation Models: Definitions, Importance, and Challenges</li>
-          <li>1.3 AI Agents</li>
-          <li>1.4 Retrieval-augmented Generation</li>
+          <li>1.1 LLMs</li>
+          <li>1.2 AI Agents</li>
+          <li>1.3 Graph Foundation Models</li>
+          <li>1.4 Retrieval-Augmented Generation</li>
           <li>1.5 Knowledge Graphs</li>
+        </ul>
+      </div>
+    </div>
+    <div class="timeline-item">
+    <div class="timeline-meta">
+        <div class="timeline-time">Time: 09:20-09:40, 20 min</div>
+        <div class="timeline-speaker">Xin Huang</div>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-16">Slides 16-50</a>
+      </div>
+      <div class="timeline-node" aria-hidden="true"></div>
+      <div class="timeline-content">
+        <strong class="timeline-section-title">Sec 2: LLMs for Graphs</strong>
+        <ul class="timeline-subsections">
+          <li>2.1 Graph Understanding
+            <ul>
+              <li>2.1.1 Graph Computation</li>
+            </ul>
+          </li>
+          <li>2.2 Graph Learning
+            <ul>
+              <li>2.2.1 LLMs-as-generators</li>
+              <li>2.2.2 Unsupervised Graph Representation</li>
+              <li>2.2.3 Graph Diffusion Prediction</li>
+            </ul>
+          </li>
+          <li>2.3 Graph Foundational Models</li>
         </ul>
       </div>
     </div>
 
     <div class="timeline-item">
       <div class="timeline-meta">
-        <div class="timeline-time">Time: TBD, 20 min</div>
-        <div class="timeline-speaker">Xin Huang</div>
-        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-28">Slides xx-xx</a>
-      </div>
-      <div class="timeline-node" aria-hidden="true"></div>
-      <div class="timeline-content">
-        <strong class="timeline-section-title">Sec 2: LLMs for Graphs</strong>
-        <!-- <ul class="timeline-subsections">
-          <li>2.1 Post-hoc vs. Intrinsic / Self-explainable</li>
-          <li>2.2 Global vs. Local</li>
-          <li>2.3 Class-specific vs. Instance-specific</li>
-          <li>2.4 Model-specific vs. Model-agnostic</li>
-          <li>2.5 Forward vs. Backward</li>
-          <li>2.6 Node-level vs. Edge-level vs. Subgraph-level</li>
-          <li>2.7 Perturbation vs. Gradient vs. Decomposition vs. Surrogate Models</li>
-          <li>2.8 Factuals vs. Counterfactuals</li>
-        </ul> -->
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-meta">
-        <div class="timeline-time">Time: TBD, 20 min</div>
+        <div class="timeline-time">Time: 09:40-10:00, 20 min</div>
         <div class="timeline-speaker">Longxu Sun</div>
-        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-28">Slides xx-xx</a>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-51">Slides 51-67</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">
         <strong class="timeline-section-title">Sec 3: Graphs for LLMs</strong>
-        <!-- <ul class="timeline-subsections">
-          <li>2.1 Post-hoc vs. Intrinsic / Self-explainable</li>
-          <li>2.2 Global vs. Local</li>
-          <li>2.3 Class-specific vs. Instance-specific</li>
-          <li>2.4 Model-specific vs. Model-agnostic</li>
-          <li>2.5 Forward vs. Backward</li>
-          <li>2.6 Node-level vs. Edge-level vs. Subgraph-level</li>
-          <li>2.7 Perturbation vs. Gradient vs. Decomposition vs. Surrogate Models</li>
-          <li>2.8 Factuals vs. Counterfactuals</li>
-        </ul> -->
+        <ul class="timeline-subsections">
+          <li>3.1 Question-Answering: GraphRAG
+            <ul>
+              <li>3.1.1 From RAG to GraphRAG</li>
+              <li>3.1.2 RAG vs GraphRAG</li>
+            </ul>
+          </li>
+          <li>3.2 Agent Memory: Memory Graph</li>
+          <li>3.3 LLM Planning: WorkFlow Graph</li>
+          <li>3.4 LLM Selection: GraphRouter</li>
+        </ul>
       </div>
     </div>
 
     <div class="timeline-item">
       <div class="timeline-meta">
-        <div class="timeline-time">Time: TBD</div>
+        <div class="timeline-time">Time: 10:00-10:20, 20 min</div>
+        <div class="timeline-speaker">Arijit Khan</div>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-68">Slides 68-113</a>
+      </div>
+      <div class="timeline-node" aria-hidden="true"></div>
+      <div class="timeline-content">
+        <strong class="timeline-section-title">Sec 4: Large Language Models &amp; Knowledge Graphs</strong>
+        <ul class="timeline-subsections">
+          <li>4.1 KGs as background knowledge for LLMs</li>
+          <li>4.2 KGs as reasoning guidelines for LLMs</li>
+          <li>4.3 KGs as refiners and validators for LLMs</li>
+          <li>4.4 LLM+KG for domain-specific applications (e.g., data integration)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <div class="timeline-time">Time: 10:20-10:30, 10 min</div>
         <div class="timeline-speaker">All</div>
         <div class="timeline-slides">Q&A</div>
       </div>
@@ -134,56 +157,86 @@ This tutorial synthesizes the algorithms, systems, and design principles driving
     Break (10:30 AM - 11:00 AM)
   </div> -->
 
-  <h3 class="schedule-session-title">Session 2 (Time: TBD, 40 min)</h3>
+  <h3 class="schedule-session-title">Session 2 (Time: 11:00-12:30, 90 min)</h3>
   <div class="timeline-track">
-    <div class="timeline-item">
-      <div class="timeline-meta">
-        <div class="timeline-time">Time: TBD, 20 min</div>
-        <div class="timeline-speaker">Arijit Khan</div>
-        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-63">Slides xx-xx</a>
-      </div>
-      <div class="timeline-node" aria-hidden="true"></div>
-      <div class="timeline-content">
-        <strong class="timeline-section-title">Sec 4: Knowledge Graphs for LLMs</strong>
-        <!-- <ul class="timeline-subsections">
-          <li>2.1 Post-hoc vs. Intrinsic / Self-explainable</li>
-          <li>2.2 Global vs. Local</li>
-          <li>2.3 Class-specific vs. Instance-specific</li>
-          <li>2.4 Model-specific vs. Model-agnostic</li>
-          <li>2.5 Forward vs. Backward</li>
-          <li>2.6 Node-level vs. Edge-level vs. Subgraph-level</li>
-          <li>2.7 Perturbation vs. Gradient vs. Decomposition vs. Surrogate Models</li>
-          <li>2.8 Factuals vs. Counterfactuals</li>
-        </ul> -->
-      </div>
-    </div>
-
+    
 
     <div class="timeline-item">
       <div class="timeline-meta">
-        <div class="timeline-time">Time: TBD, 20 min</div>
+        <div class="timeline-time">Time: 11:00-11:20, 20 min</div>
         <div class="timeline-speaker">Longxu Sun</div>
-        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-63">Slides xx-xx</a>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-114">Slides 114-125</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">
         <strong class="timeline-section-title">Sec 5: LLMs for Knowledge Graphs</strong>
-        <!-- <ul class="timeline-subsections">
-          <li>2.1 Post-hoc vs. Intrinsic / Self-explainable</li>
-          <li>2.2 Global vs. Local</li>
-          <li>2.3 Class-specific vs. Instance-specific</li>
-          <li>2.4 Model-specific vs. Model-agnostic</li>
-          <li>2.5 Forward vs. Backward</li>
-          <li>2.6 Node-level vs. Edge-level vs. Subgraph-level</li>
-          <li>2.7 Perturbation vs. Gradient vs. Decomposition vs. Surrogate Models</li>
-          <li>2.8 Factuals vs. Counterfactuals</li>
-        </ul> -->
+        <ul class="timeline-subsections">
+          <li>5.1 Knowledge Graph Link Prediction</li>
+          <li>5.2 Knowledge Graph Embedding</li>
+          <li>5.3 Knowledge Graph Construction</li>
+          <li>5.4 Knowledge Graph Completion</li>
+        </ul>
       </div>
     </div>
 
     <div class="timeline-item">
       <div class="timeline-meta">
-        <div class="timeline-time">Time: TBD</div>
+        <div class="timeline-time">Time: 11:20-11:40, 20 min</div>
+        <div class="timeline-speaker">Arijit Khan</div>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-126">Slides 126-165</a>
+      </div>
+      <div class="timeline-node" aria-hidden="true"></div>
+      <div class="timeline-content">
+        <strong class="timeline-section-title">Sec 6: AI Agents</strong>
+        <ul class="timeline-subsections">
+          <li>6.1 Agent Interaction With Task Planning Graphs</li>
+          <li>6.2 Agent Interaction With Task Execution Graphs</li>
+          <li>6.3 Agent Interaction With Memory Graphs</li>
+          <li>6.4 Multi-Agent Coordination Graphs</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <div class="timeline-time">Time: 11:40-12:00, 20 min</div>
+        <div class="timeline-speaker">Longxu Sun</div>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-166">Slides 166-179</a>
+      </div>
+      <div class="timeline-node" aria-hidden="true"></div>
+      <div class="timeline-content">
+        <strong class="timeline-section-title">Sec 7: AI Agents for Graphs</strong>
+        <ul class="timeline-subsections">
+          <li>7.1 General Graph Problem Solving</li>
+          <li>7.2 Tool-Augmented Graph Algorithmic Reasoning</li>
+          <li>7.3 Domain-Specific KG Construction</li>
+          <li>7.4 Community Search</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <div class="timeline-time">Time: 12:00-12:20, 20 min</div>
+        <div class="timeline-speaker">Arijit Khan</div>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-180">Slides 180-187</a>
+      </div>
+      <div class="timeline-node" aria-hidden="true"></div>
+      <div class="timeline-content">
+        <strong class="timeline-section-title">Sec 8: Future Directions</strong>
+        <ul class="timeline-subsections">
+          <li>8.1 Explainability, Responsibility, and Reliability</li>
+          <li>8.2 Security and Privacy</li>
+          <li>8.3 Knowledge Graph-based Agentic Memory</li>
+          <li>8.4 AI Agents with Graph DB &amp; Graph Analytics</li>
+          <li>8.5 Domain-specific Applications</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-meta">
+        <div class="timeline-time">Time: 12:20-12:30, 10 min</div>
         <div class="timeline-speaker">All</div>
         <div class="timeline-slides">Q&A</div>
       </div>
@@ -194,84 +247,8 @@ This tutorial synthesizes the algorithms, systems, and design principles driving
     </div>
   </div>
 
-  <h3 class="schedule-session-title">Session 3 (Time: TBD, 70 min)</h3>
+  <!-- <h3 class="schedule-session-title">Session 3 (Time: TBD, 70 min)</h3>
   <div class="timeline-track">
-    <div class="timeline-item">
-      <div class="timeline-meta">
-        <div class="timeline-time">Time: TBD, 20 min</div>
-        <div class="timeline-speaker">Arijit Khan</div>
-        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-63">Slides xx-xx</a>
-      </div>
-      <div class="timeline-node" aria-hidden="true"></div>
-      <div class="timeline-content">
-        <strong class="timeline-section-title">Sec 6 Graphs for AI Agents </strong>
-        <!-- <ul class="timeline-subsections">
-          <li>2.1 Post-hoc vs. Intrinsic / Self-explainable</li>
-          <li>2.2 Global vs. Local</li>
-          <li>2.3 Class-specific vs. Instance-specific</li>
-          <li>2.4 Model-specific vs. Model-agnostic</li>
-          <li>2.5 Forward vs. Backward</li>
-          <li>2.6 Node-level vs. Edge-level vs. Subgraph-level</li>
-          <li>2.7 Perturbation vs. Gradient vs. Decomposition vs. Surrogate Models</li>
-          <li>2.8 Factuals vs. Counterfactuals</li>
-        </ul> -->
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-meta">
-        <div class="timeline-time">Time: TBD, 20 min</div>
-        <div class="timeline-speaker">Longxu Sun</div>
-        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-63">Slides xx-xx</a>
-      </div>
-      <div class="timeline-node" aria-hidden="true"></div>
-      <div class="timeline-content">
-        <strong class="timeline-section-title">Sec 7 AI Agents for Graphs</strong>
-        <!-- <ul class="timeline-subsections">
-          <li>2.1 Post-hoc vs. Intrinsic / Self-explainable</li>
-          <li>2.2 Global vs. Local</li>
-          <li>2.3 Class-specific vs. Instance-specific</li>
-          <li>2.4 Model-specific vs. Model-agnostic</li>
-          <li>2.5 Forward vs. Backward</li>
-          <li>2.6 Node-level vs. Edge-level vs. Subgraph-level</li>
-          <li>2.7 Perturbation vs. Gradient vs. Decomposition vs. Surrogate Models</li>
-          <li>2.8 Factuals vs. Counterfactuals</li>
-        </ul> -->
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-meta">
-        <div class="timeline-time">Time: TBD, 30 min</div>
-        <div class="timeline-speaker">Arijit Khan</div>
-        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-63">Slides xx-xx</a>
-      </div>
-      <div class="timeline-node" aria-hidden="true"></div>
-      <div class="timeline-content">
-        <strong class="timeline-section-title">Sec 8: Future Directions</strong>
-        <!-- <ul class="timeline-subsections">
-          <li>2.1 Post-hoc vs. Intrinsic / Self-explainable</li>
-          <li>2.2 Global vs. Local</li>
-          <li>2.3 Class-specific vs. Instance-specific</li>
-          <li>2.4 Model-specific vs. Model-agnostic</li>
-          <li>2.5 Forward vs. Backward</li>
-          <li>2.6 Node-level vs. Edge-level vs. Subgraph-level</li>
-          <li>2.7 Perturbation vs. Gradient vs. Decomposition vs. Surrogate Models</li>
-          <li>2.8 Factuals vs. Counterfactuals</li>
-        </ul> -->
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-meta">
-        <div class="timeline-time">Time: TBD</div>
-        <div class="timeline-speaker">All</div>
-        <div class="timeline-slides">Q&A</div>
-      </div>
-      <div class="timeline-node" aria-hidden="true"></div>
-      <div class="timeline-content">
-        <strong>Q&A (Session 3)</strong>
-      </div>
-    </div>
-  </div>
+    
+  </div> -->
 </section>
