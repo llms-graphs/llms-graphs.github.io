@@ -12,7 +12,7 @@ description: "PAKDD 2026 Tutorial Slides"
   .slides-toolbar {
     position: sticky;
     top: 0;
-    z-index: 40;
+    z-index: 60;
     margin: 0 0 14px;
     padding: 10px;
     background: rgba(248, 250, 252, 0.75);
@@ -336,10 +336,15 @@ description: "PAKDD 2026 Tutorial Slides"
     border-radius: 6px;
   }
 
+  .slides-stage {
+    position: relative;
+    min-height: 55vh;
+  }
+
   .loading-overlay {
-    position: fixed;
+    position: absolute;
     inset: 0;
-    z-index: 55;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -418,6 +423,28 @@ description: "PAKDD 2026 Tutorial Slides"
     color: #7f1d1d;
   }
 
+  .error-downloads {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+  }
+
+  .error-downloads .tool-btn {
+    display: inline-block;
+    padding: 7px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid var(--accent);
+    background: #eaf6f4;
+    color: var(--accent-ink);
+    text-decoration: none;
+  }
+
+  .error-downloads .tool-btn:hover {
+    background: #dff1ee;
+  }
+
   .error {
     color: #b91c1c;
     font-size: 13px;
@@ -453,16 +480,18 @@ description: "PAKDD 2026 Tutorial Slides"
     </div>
   </div>
 
-  <div id="slidesRoot" aria-live="polite"></div>
-  <div id="slidesStatus" class="loading-overlay" role="status" aria-live="polite" aria-atomic="true">
-    <div class="loading-card">
-      <div class="loading-header">
-        <span class="loading-spinner" aria-hidden="true"></span>
-        <p class="loading-title">Preparing Slide Viewer</p>
-      </div>
-      <p id="slidesStatusText" class="loading-text">Loading slides</p>
-      <div class="loading-progress" aria-hidden="true">
-        <span class="loading-progress-bar"></span>
+  <div class="slides-stage">
+    <div id="slidesRoot" aria-live="polite"></div>
+    <div id="slidesStatus" class="loading-overlay" role="status" aria-live="polite" aria-atomic="true">
+      <div class="loading-card">
+        <div class="loading-header">
+          <span class="loading-spinner" aria-hidden="true"></span>
+          <p class="loading-title">Preparing Slide Viewer</p>
+        </div>
+        <p id="slidesStatusText" class="loading-text">Loading slides</p>
+        <div class="loading-progress" aria-hidden="true">
+          <span class="loading-progress-bar"></span>
+        </div>
       </div>
     </div>
   </div>
@@ -470,6 +499,8 @@ description: "PAKDD 2026 Tutorial Slides"
 
 <script type="module">
   const pdfUrl = "{{ '/assets/docs/PAKDD26tutorial.pdf' | relative_url }}";
+  const pdfDownloadUrl = "{{ '/assets/docs/PAKDD26tutorial.pdf' | relative_url }}";
+  const pptxDownloadUrl = "{{ '/assets/docs/PAKDD26tutorial.pptx' | relative_url }}";
   const deckTitle = "[PAKDD'26 Tutorial] LLMs+Graphs: Toward Graph-Native, Synergistic AI Systems";
 
   // Fallback roadmap used when the PDF does not contain outline/bookmarks.
@@ -517,6 +548,10 @@ description: "PAKDD 2026 Tutorial Slides"
       <div class="loading-card">
         <p class="loading-title">Unable to Load Slides</p>
         <p class="loading-text">${message}</p>
+        <div class="error-downloads">
+          <a class="tool-btn primary" href="${pdfDownloadUrl}" download>Download PDF</a>
+          <a class="tool-btn primary" href="${pptxDownloadUrl}" download>Download PPTX</a>
+        </div>
       </div>
     `;
   }
@@ -720,11 +755,20 @@ description: "PAKDD 2026 Tutorial Slides"
   }
 
   function setWorkerSrcLocal(pdfjs) {
-    pdfjs.GlobalWorkerOptions.workerSrc = "{{ '/assets/js/pdf.worker.mjs' | relative_url }}";
+    pdfjs.GlobalWorkerOptions.workerSrc = "{{ '/assets/js/pdf.worker.min.mjs' | relative_url }}";
   }
 
   function setWorkerSrcCdn(pdfjs) {
-    pdfjs.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.worker.mjs";
+    pdfjs.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.worker.min.mjs";
+  }
+
+  async function loadPdfDocument(pdfjs) {
+    return pdfjs.getDocument({
+      url: pdfUrl,
+      withCredentials: false,
+      disableStream: false,
+      disableAutoFetch: false
+    }).promise;
   }
 
   (async function boot() {
@@ -736,19 +780,19 @@ description: "PAKDD 2026 Tutorial Slides"
       return;
     }
 
-    setWorkerSrcLocal(pdfjs);
+    setWorkerSrcCdn(pdfjs);
     setLoadingStep(2, "Step 2/3: Parsing Pages");
 
     let pdfDoc = null;
     try {
-      pdfDoc = await pdfjs.getDocument(pdfUrl).promise;
+      pdfDoc = await loadPdfDocument(pdfjs);
     } catch (e1) {
-      console.warn("Local worker failed, retrying with CDN worker...", e1);
+      console.warn("CDN worker failed, retrying with local worker...", e1);
       try {
-        setWorkerSrcCdn(pdfjs);
-        pdfDoc = await pdfjs.getDocument(pdfUrl).promise;
+        setWorkerSrcLocal(pdfjs);
+        pdfDoc = await loadPdfDocument(pdfjs);
       } catch (e2) {
-        showLoadError("Failed to load PDF. Use the Download menu.");
+        showLoadError("Failed to load PDF online. You can still download the deck below or use the Download button above.");
         console.error(e2);
         return;
       }
