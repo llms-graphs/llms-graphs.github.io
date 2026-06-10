@@ -76,7 +76,7 @@ This tutorial synthesizes the algorithms, systems, and design principles driving
     <div class="timeline-meta">
         <div class="timeline-time">Time: 09:20-09:40, 20 min</div>
         <div class="timeline-speaker">Xin Huang</div>
-        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-16">Slides 16-50</a>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-16">Slides 16-48</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">
@@ -103,7 +103,7 @@ This tutorial synthesizes the algorithms, systems, and design principles driving
       <div class="timeline-meta">
         <div class="timeline-time">Time: 09:40-10:00, 20 min</div>
         <div class="timeline-speaker">Longxu Sun</div>
-        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-51">Slides 51-67</a>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-49">Slides 49-65</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">
@@ -126,7 +126,7 @@ This tutorial synthesizes the algorithms, systems, and design principles driving
       <div class="timeline-meta">
         <div class="timeline-time">Time: 10:00-10:20, 20 min</div>
         <div class="timeline-speaker">Arijit Khan</div>
-        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-68">Slides 68-113</a>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-66">Slides 66-111</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">
@@ -165,7 +165,7 @@ This tutorial synthesizes the algorithms, systems, and design principles driving
       <div class="timeline-meta">
         <div class="timeline-time">Time: 11:00-11:20, 20 min</div>
         <div class="timeline-speaker">Longxu Sun</div>
-        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-114">Slides 114-125</a>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-112">Slides 112-123</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">
@@ -183,7 +183,7 @@ This tutorial synthesizes the algorithms, systems, and design principles driving
       <div class="timeline-meta">
         <div class="timeline-time">Time: 11:20-11:40, 20 min</div>
         <div class="timeline-speaker">Arijit Khan</div>
-        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-126">Slides 126-165</a>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-124">Slides 124-163</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">
@@ -201,7 +201,7 @@ This tutorial synthesizes the algorithms, systems, and design principles driving
       <div class="timeline-meta">
         <div class="timeline-time">Time: 11:40-12:00, 20 min</div>
         <div class="timeline-speaker">Longxu Sun</div>
-        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-166">Slides 166-179</a>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-164">Slides 164-177</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">
@@ -219,7 +219,7 @@ This tutorial synthesizes the algorithms, systems, and design principles driving
       <div class="timeline-meta">
         <div class="timeline-time">Time: 12:00-12:20, 20 min</div>
         <div class="timeline-speaker">Arijit Khan</div>
-        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-180">Slides 180-187</a>
+        <a class="timeline-slides" href="{{ '/pages/slides' | relative_url }}#slide-178">Slides 178-185</a>
       </div>
       <div class="timeline-node" aria-hidden="true"></div>
       <div class="timeline-content">

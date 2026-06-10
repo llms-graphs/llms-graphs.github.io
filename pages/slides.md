@@ -508,12 +508,12 @@ description: "PAKDD 2026 Tutorial Slides"
   const fallbackRoadmap = [
     { slide: 1, label: "Sec 1: LLMs" },
     { slide: 16, label: "Sec 2: LLMs for Graphs" },
-    { slide: 51, label: "Sec 3: Graphs for LLMs" },
-    { slide: 68, label: "Sec 4: Large Language Models & Knowledge Graphs" },
-    { slide: 114, label: "Sec 5: LLMs for Knowledge Graphs" },
-    { slide: 126, label: "Sec 6: AI Agents" },
-    { slide: 166, label: "Sec 7: AI Agents for Graphs" },
-    { slide: 180, label: "Sec 8: Future Directions" }
+    { slide: 49, label: "Sec 3: Graphs for LLMs" },
+    { slide: 66, label: "Sec 4: Large Language Models & Knowledge Graphs" },
+    { slide: 112, label: "Sec 5: LLMs for Knowledge Graphs" },
+    { slide: 124, label: "Sec 6: AI Agents" },
+    { slide: 164, label: "Sec 7: AI Agents for Graphs" },
+    { slide: 178, label: "Sec 8: Future Directions" }
   ];
 
   const root = document.getElementById("slidesRoot");
